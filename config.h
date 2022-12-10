@@ -147,7 +147,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_y,      	setlayout,	{.v = &layouts[3]} }, /* dwindle */
 	{ MODKEY,			XK_z,		incrgaps,	{.i = +3 } },
 
-	{ 0,				XK_Print,	spawn,		SHCMD("maim -s | xclip -sel clip -t image/png") },
+	{ 0,				XK_Print,	spawn,		SHCMD("maim -s | xclip -selection clipboard -t image/png") },
 	{ MODKEY,			XK_Print,	spawn,		SHCMD("killall screenkey || screenkey &") },
 	{ ShiftMask,			XK_Print,	spawn,		{.v = (const char*[]){ "maimpick", NULL } } },
 	//{ MODKEY,			XK_Scroll_Lock,	spawn,		SHCMD("killall screenkey || screenkey &") },
